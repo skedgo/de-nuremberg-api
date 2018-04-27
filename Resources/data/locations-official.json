@@ -290,7 +290,7 @@
       "name": "Tiefgarage Maxtorhof",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/stadtgebiet/maxtorhof.html",
       "totalSpaces": 313,
-      "open": "Mo-So 06:00-23:00",
+      "open": "Mo-Su 06:00-23:00",
       "maxHeightInMetres": 2.00,
       "fares": [
         {
@@ -360,7 +360,7 @@
       "name": "Parkhaus Franken Campus",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/stadtgebiet/franken-campus.html",
       "totalSpaces": 754,
-      "open": "Mo-So 05:30-21:00",
+      "open": "Mo-Su 05:30-21:00",
       "maxHeightInMetres": 2.00,
       "fares": [
         {
