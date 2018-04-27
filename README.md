@@ -4,9 +4,6 @@
     <a href="https://developer.tripgo.com/extensions/">
         <img src="http://img.shields.io/badge/read_the-docs-92A8D1.svg" alt="Documentation">
     </a>
-    <a href="http://vapor.team">
-        <img src="http://vapor.team/badge.svg" alt="Slack Team">
-    </a>
     <a href="LICENSE">
         <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
     </a>
@@ -31,3 +28,9 @@ Includes:
 - Car parks: https://de-nuremberg-api.vapor.cloud/carparks/
 - Details for one: https://de-nuremberg-api.vapor.cloud/carparks/{id}/
 - Real-time for one: https://de-nuremberg-api.vapor.cloud/carparks/{id}/availability
+
+## Contributing
+
+This is implemented using the [Vapor](https://vapor.codes) framework, running Swift on the server (macOS or Linux). 
+
+Run it from the command line locally using `vapor run` and test it using `vapor test`. On macOS you can also use Xcode, using the "Run" scheme for running the server locally, or using the "de-nuremberg-api-Package" scheme for testing.
