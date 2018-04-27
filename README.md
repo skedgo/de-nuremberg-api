@@ -1,7 +1,6 @@
+# <img src="api-mark-logo.png" alt="TripGo API" width="30" height="30"> TSP Connectors for Nuremberg, Germany
+
 <p align="center">
-    <img src="https://cloud.githubusercontent.com/assets/1342803/24797159/52fb0d88-1b90-11e7-85a5-359fff0496a4.png" width="320" alt="MySQL">
-    <br>
-    <br>
     <a href="https://developer.tripgo.com/extensions/">
         <img src="http://img.shields.io/badge/read_the-docs-92A8D1.svg" alt="Documentation">
     </a>
@@ -19,7 +18,6 @@
     </a>
 </center>
 
-# TSP Connectors for Nuremberg, Germany
 
 This lightweight web API provides wrappers around transport-related APIs for Nuremberg, Germany, making them compatible with the [TripGo API](https://developer.tripgo.com).
 
