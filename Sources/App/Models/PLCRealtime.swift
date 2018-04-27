@@ -46,7 +46,7 @@ extension Array where Element == CarParkRealtime {
 
 fileprivate extension CarParkRealtime {
   init?(line: String) {
-    let parts = line.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }
+    let parts = line.split(separator: ",").map { String($0).trim() }
     guard parts.count >= 6, let total = Int(parts[2]), let available = Int(parts[3]) else {
       return nil
     }
