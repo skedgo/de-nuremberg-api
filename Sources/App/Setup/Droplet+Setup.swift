@@ -1,8 +1,9 @@
 @_exported import Vapor
 
 extension Droplet {
-    public func setup() throws {
-        try setupRoutes()
-        // Do any additional droplet setup
-    }
+  public func setup() throws {
+    try setupRoutes()
+    
+    CarParkDatabase.shared = try CarParkDatabase(directory: workingDirectory() + "Resources/data/")
+  }
 }
