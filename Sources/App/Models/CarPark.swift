@@ -22,7 +22,8 @@ struct CarPark: Codable {
   let fares: [FareTable]
   
   struct FareTable: Codable {
-    let title: String
+    let title: String?
+    let times: String
     let prices: [Fare]
   }
   

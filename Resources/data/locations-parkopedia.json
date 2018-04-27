@@ -13,7 +13,7 @@
       "maxHeightInMetres": 1.9,
       "fares": [
         {
-          "title": "Mon-Sat 07:00 - 20:00",
+          "times": "Mon-Sat 07:00 - 20:00",
           "prices": [
             { "maxDurationInMinutes": 60,  "value": 1.5 },
             { "type": "additional", "maxDurationInMinutes": 60, "value": 2.0 },
@@ -21,7 +21,7 @@
           ]
         },
         {
-          "title": "Mon-Sat 20:00 - 00:00",
+          "times": "Mon-Sat 20:00 - 00:00",
           "prices": [
             { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 }
           ]
@@ -40,7 +40,7 @@
       "maxHeightInMetres": 2.00,
       "fares": [
         {
-          "title": "Mon-Sun 06:00 - 21:00",
+          "times": "Mon-Sun 06:00 - 21:00",
           "prices": [
             { "maxDurationInMinutes": 60,  "value": 1.8 },
             { "type": "additional", "maxDurationInMinutes": 60, "value": 2.0 },
@@ -48,13 +48,14 @@
           ]
         },
         {
-          "title": "Mon-Sun 21:00 - 06:00",
+          "times": "Mon-Sun 21:00 - 06:00",
           "prices": [
             { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 }
           ]
         },
         {
-          "title": "Patients - Mon-Sun",
+          "title": "Patients",
+          "times": "24/7",
           "prices": [
             { "type": "daytime", "maxDurationInMinutes": 1440, "value": 5 }
           ]
@@ -73,7 +74,7 @@
       "maxHeightInMetres": 2.05,
       "fares": [
         {
-          "title": "Mon-Sat 08:30 - 20:30",
+          "times": "Mon-Sat 08:30 - 20:30",
           "prices": [
             { "maxDurationInMinutes": 30,  "value": 1.0 },
             { "maxDurationInMinutes": 60,  "value": 2.0 },
@@ -83,14 +84,14 @@
           ]
         },
         {
-          "title": "Mon-Sat 20:30 - 08:30",
+          "times": "Mon-Sat 20:30 - 08:30",
           "prices": [
             { "maxDurationInMinutes": 30,  "value": 1.0 },
             { "type": "half day", "maxDurationInMinutes": 720, "value": 10 }
           ]
         },
         {
-          "title": "Sun - All day",
+          "times": "Sun",
           "prices": [
             { "maxDurationInMinutes": 60,  "value": 1.0 },
             { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
@@ -111,7 +112,7 @@
       "maxHeightInMetres": 2.1,
       "fares": [
         {
-          "title": "TAGES-TARIF 08:00 - 21:00",
+          "times": "08:00 - 21:00",
           "prices": [
             { "maxDurationInMinutes": 60,  "value": 2.0 },
             { "type": "additional", "maxDurationInMinutes": 60, "value": 1.5 },
@@ -119,7 +120,7 @@
           ]
         },
         {
-          "title": "NACHT-TARIF 21:00-08:00",
+          "times": "21:00-08:00",
           "prices": [
             { "type": "additional", "maxDurationInMinutes": 60, "value": 1 }
           ]
@@ -138,14 +139,14 @@
       "maxHeightInMetres": 2.00,
       "fares": [
         {
-          "title": "TAGES-TARIF 08:00-21:00",
+          "times": "08:00-21:00",
           "prices": [
             { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
             { "type": "daytime", "maxDurationInMinutes": 1440, "value": 15 }
           ]
         },
         {
-          "title": "NACHT-TARIF 21:00-08:00",
+          "times": "21:00-08:00",
           "prices": [
             { "type": "additional", "maxDurationInMinutes": 60, "value": 0.5 },
             { "type": "daytime", "maxDurationInMinutes": 1440, "value": 3 }
@@ -165,7 +166,7 @@
       "maxHeightInMetres": 2.0,
       "fares": [
         {
-          "title": "Mon-Fri",
+          "times": "Mon-Fri",
           "prices": [
             { "maxDurationInMinutes": 60,  "value": 0.5 },
             { "maxDurationInMinutes": 120, "value": 2.0 },
@@ -174,7 +175,7 @@
           ]
         },
         {
-          "title": "Sat-Sun",
+          "times": "Sat-Sun",
           "prices": [
             { "maxDurationInMinutes": 60,  "value": 0.5 },
             { "maxDurationInMinutes": 120, "value": 2.0 },
@@ -183,7 +184,8 @@
           ]
         },
         {
-          "title": "Customers - Mon-Sat",
+          "title": "Customers",
+          "times": "Mon-Sat",
           "prices": [
             { "maxDurationInMinutes": 60,  "value": 0 },
             { "type": "additional", "maxDurationInMinutes": 60, "value": 1.5 },
@@ -204,7 +206,7 @@
       "maxHeightInMetres": 2.00,
       "fares": [
         {
-          "title": "All day",
+          "times": "Mon-Sun",
           "prices": [
             { "type": "additional", "maxDurationInMinutes": 60, "value": 2.0 }
           ]
@@ -223,7 +225,7 @@
       "maxHeightInMetres": 2.1,
       "fares": [
         {
-          "title": "Mon-Sat 08:00 - 20:30",
+          "times": "Mon-Sat 08:00 - 20:30",
           "prices": [
             { "maxDurationInMinutes": 60,  "value": 1.5 },
             { "maxDurationInMinutes": 120, "value": 3.5 },
@@ -245,7 +247,7 @@
       "maxHeightInMetres": 2.00,
       "fares": [
         {
-          "title": "Mon-Sat - All day",
+          "times": "Mon-Sat",
           "prices": [
             { "maxDurationInMinutes": 15,  "value": 0.5 },
             { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
@@ -253,7 +255,7 @@
           ]
         },
         {
-          "title": "Sun - All day",
+          "times": "Sun",
           "prices": [
             { "maxDurationInMinutes": 15,  "value": 0.5 },
             { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
@@ -274,14 +276,15 @@
       "maxHeightInMetres": 2.1,
       "fares": [
         {
-          "title": "Regular",
+          "times": "24/7",
           "prices": [
             { "type": "additional", "maxDurationInMinutes": 60, "value": 2.0 },
             { "type": "daytime", "maxDurationInMinutes": 1440, "value": 18 }
           ]
         },
         {
-          "title": "Kino-Tarif 19:00-06:00",
+          "title": "Kino-Tarif",
+          "times": "19:00-06:00",
           "prices": [
             { "maxDurationInMinutes": 360,  "value": 3 },
             { "type": "additional", "maxDurationInMinutes": 60, "value": 0.5 }
