@@ -33,7 +33,7 @@ class PLCRealtime {
   
   static func parse(_ data: String) -> [CarParkRealtime] {
     let content = data.split(separator: "\r\n").filter { !$0.isEmpty }[3...]
-    return content.compactMap { CarParkRealtime(line: String($0)) }
+    return content.flatMap { CarParkRealtime(line: String($0)) }
   }
   
 }

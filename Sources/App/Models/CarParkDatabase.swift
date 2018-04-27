@@ -21,7 +21,9 @@ class CarParkDatabase {
     
     self.carParks = sources
       .flatMap { $0.list }
-      .reduce(into: [:]) { $0[$1.id] = $1 }
+      .reduce(into: [:]) { (acc: inout [String: CarPark], carPark: CarPark) in
+        acc[carPark.id] = carPark
+      }
   }
   
   fileprivate let sources: [CarParkSource]
