@@ -16,20 +16,18 @@ class CarParkRealtimeCache {
   
   private var realtimes: [CarParkRealtime] = []
   
-  func fetchAndUpdate(completion: @escaping ([CarParkRealtime]) -> Void) {
+  func fetchAndUpdate(for droplet: Droplet) throws -> [CarParkRealtime] {
     guard realtimes.isEmpty else {
-      completion(realtimes)
-      return
+      return realtimes
     }
     
     // TODO: Expire results, e.g., if real-times are outdated
     
-    PLCRealtime.fetch { new in
-      if !new.isEmpty {
-        self.realtimes = new
-      }
-      completion(self.realtimes)
+    let new = try PLCRealtimeFetcher.fetch(for: droplet)
+    if !new.isEmpty {
+      realtimes = new
     }
+    return realtimes
   }
   
 }

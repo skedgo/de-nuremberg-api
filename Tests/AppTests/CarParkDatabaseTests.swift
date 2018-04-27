@@ -46,7 +46,7 @@ extension CarParkDatabaseTests {
   private func loadRealtime() throws -> [CarParkRealtime] {
     let path = URL(fileURLWithPath: workingDirectory() + "Tests/AppTests/Data/plc_info.htm")
     let content = try String(contentsOf: path, encoding: .ascii)
-    return PLCRealtime.parse(content)
+    return PLCRealtimeFetcher.parse(content)
   }
 }
 

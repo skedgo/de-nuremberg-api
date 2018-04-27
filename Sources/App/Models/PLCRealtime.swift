@@ -6,29 +6,33 @@
 //
 
 import Foundation
+import Vapor
 
-class PLCRealtime {
+class PLCRealtimeFetcher {
   
   enum PLCRealtimeParserError: Error {
+    case unexpectedResponse
     case incompleteRow
   }
   
   private init() {
   }
   
-  private static let url = URL(string: "http://tiefbauamt.nuernberg.de/site/parken/parkhausbelegung/plc_info.htm")!
+  private static let endpoint = "http://tiefbauamt.nuernberg.de/site/parken/parkhausbelegung/plc_info.htm"
   
-  static func fetch(completion: @escaping ([CarParkRealtime]) -> Void) {
-    let task = URLSession.shared.dataTask(with: url) { data, _, _ in
-      guard let data = data, let string = String(data: data, encoding: .ascii) else {
-        completion([])
-        return
-      }
-      
-      let carParks = PLCRealtime.parse(string)
-      completion(carParks)
+  static func fetch(for droplet: Droplet) throws -> [CarParkRealtime] {
+    
+    let response = try droplet.client.get(endpoint)
+    guard case .data(let bytes) = response.body else {
+      throw PLCRealtimeParserError.unexpectedResponse
     }
-    task.resume()
+    
+    let data = Data(bytes: bytes)
+    guard let string = String(data: data, encoding: .ascii) else {
+      throw PLCRealtimeParserError.unexpectedResponse
+    }
+
+    return PLCRealtimeFetcher.parse(string)
   }
   
   static func parse(_ data: String) -> [CarParkRealtime] {

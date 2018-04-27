@@ -28,13 +28,9 @@ extension Droplet {
         return Response(status: .notFound, body: "No real-time data available for car park with id \(id)")
       }
       
-      let result = try Portal<CarParkRealtime?>.open { portal in
-        CarParkRealtimeCache.shared.fetchAndUpdate { realtimes in
-          let match = realtimes.find(carPark)
-          portal.close(with: match)
-        }
-      }
-      guard let match = result else {
+      let realtimes = try CarParkRealtimeCache.shared.fetchAndUpdate(for: self)
+
+      guard let match = realtimes.find(carPark) else {
         return Response(status: .notFound, body: "Real-time data currently not available for car park with id \(id)")
       }
 
