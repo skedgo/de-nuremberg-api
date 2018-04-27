@@ -16,6 +16,21 @@ class PLCRealtime {
   private init() {
   }
   
+  private static let url = URL(string: "http://tiefbauamt.nuernberg.de/site/parken/parkhausbelegung/plc_info.htm")!
+  
+  static func fetch(completion: @escaping ([CarParkRealtime]) -> Void) {
+    let task = URLSession.shared.dataTask(with: url) { data, _, _ in
+      guard let data = data, let string = String(data: data, encoding: .ascii) else {
+        completion([])
+        return
+      }
+      
+      let carParks = PLCRealtime.parse(string)
+      completion(carParks)
+    }
+    task.resume()
+  }
+  
   static func parse(_ data: String) -> [CarParkRealtime] {
     let content = data.split(separator: "\r\n").filter { !$0.isEmpty }[3...]
     return content.compactMap { CarParkRealtime(line: String($0)) }

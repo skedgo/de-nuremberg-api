@@ -10,19 +10,24 @@ import Foundation
 class CarParkDatabase {
   static var shared: CarParkDatabase?
   
-  fileprivate let sources: [CarParkSource]
-  
   init(directory: String) throws {
     
     let path = URL(fileURLWithPath: directory)
-    sources = try FileManager.default
+    let sources = try FileManager.default
       .contentsOfDirectory(at: path, includingPropertiesForKeys: nil, options: [])
       .map(CarParkSource.load)
+    
+    self.sources = sources
+    
+    self.carParks = sources
+      .flatMap { $0.list }
+      .reduce(into: [:]) { $0[$1.id] = $1 }
   }
   
-  var carParks: [CarPark] {
-    return sources.flatMap { $0.list }
-  }
+  fileprivate let sources: [CarParkSource]
+  
+  let carParks: [String: CarPark]
+  
 }
 
 fileprivate struct CarParkSource: Codable {

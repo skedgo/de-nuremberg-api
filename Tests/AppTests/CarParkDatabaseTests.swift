@@ -49,3 +49,16 @@ extension CarParkDatabaseTests {
     return PLCRealtime.parse(content)
   }
 }
+
+// MARK: Manifest
+
+extension CarParkDatabaseTests {
+  /// This is a requirement for XCTest on Linux
+  /// to function properly.
+  /// See ./Tests/LinuxMain.swift for examples
+  static let allTests = [
+    ("testLoadingCarParks", testLoadingCarParks),
+    ("testParsingRealtime", testParsingRealtime),
+    ("testMatching", testMatching),
+    ]
+}

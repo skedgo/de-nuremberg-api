@@ -2,6 +2,7 @@
   "source": "https://www.parkopedia.de/",
   "list": [
     {
+      "id": "galeria-kaufhof",
       "lat": 49.449371,
       "lng": 11.075835,
       "name": "Parkhaus Galeria Kaufhof",
@@ -28,6 +29,7 @@
       ]
     },
     {
+      "id": "erler-klinik",
       "lat": 49.453079,
       "lng": 11.068085,
       "name": "Parkhaus Erler-Klinik",
@@ -60,6 +62,7 @@
       ]
     },
     {
+      "id": "adlerstraße",
       "lat": 49.45185,
       "lng": 11.077162,
       "name": "Parkhaus Adlerstraße",
@@ -97,6 +100,7 @@
       ]
     },
     {
+      "id": "woehrl",
       "lat": 49.451977,
       "lng": 11.070484,
       "name": "Parkhaus Wöhrl",
@@ -123,6 +127,7 @@
       ]
     },
     {
+      "id": "akademie",
       "lat": 49.451115,
       "lng": 11.084146,
       "name": "Parkhaus Nürnberger Akademie",
@@ -149,6 +154,7 @@
       ]
     },
     {
+      "id": "city-park-center",
       "lat": 49.445408,
       "lng": 11.071309,
       "name": "Parkhaus City-Park-Center",
@@ -187,6 +193,7 @@
       ]
     },
     {
+      "id": "maximum",
       "lat": 49.449539,
       "lng": 11.074343,
       "name": "Parkhaus Maximum",
@@ -205,6 +212,7 @@
       ]
     },
     {
+      "id": "city-point",
       "lat": 49.449347,
       "lng": 11.07672,
       "name": "Parkhaus City-Point",
@@ -226,6 +234,7 @@
       ]
     },
     {
+      "id": "hauptbahnhof",
       "lat": 49.446821,
       "lng": 11.082929,
       "name": "Parkhaus Hauptbahnhof",
@@ -254,6 +263,7 @@
       ]
     },
     {
+      "id": "karstadt",
       "lat": 49.452913,
       "lng": 11.081308,
       "name": "Parkhaus Karstadt",

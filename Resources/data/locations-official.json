@@ -2,6 +2,7 @@
   "source": "http://www.parkhaus-nuernberg.de/parkhaeuser/kartenansicht.html",
   "list": [
     {
+      "id": "roederstrasse",
       "lat": 49.3866600,
       "lng": 11.3532600,
       "name": "Parkplatz / Tiefgarage Röderstraße",
@@ -24,6 +25,7 @@
       ]
     },
     {
+      "id": "theater",
       "lat": 49.445170,
       "lng": 11.076055,
       "name": "Parkhaus Theater",
@@ -49,6 +51,7 @@
       ]
     },
     {
+      "id": "sterntor",
       "lat": 49.4478768,
       "lng": 11.0774303,
       "name": "Parkhaus Sterntor",
@@ -76,6 +79,7 @@
       ]    
     },
     {
+      "id": "jakobsmarkt",
       "lat": 49.4490226,
       "lng": 11.0711328,
       "name": "Parkhaus Jakobsmarkt",
@@ -103,6 +107,7 @@
       ]
     },
     {
+      "id": "adcom-center",
       "lat": 49.4478969,
       "lng": 11.0866880,
       "name": "Tiefgarage ADCOM-Center",
@@ -122,6 +127,7 @@
       ]
     },
     {
+      "id": "katharinenhof",
       "lat": 49.4512086,
       "lng": 11.0819868,
       "name": "Parkhaus Katharinenhof",
@@ -149,6 +155,7 @@
       ]
     },
     {
+      "id": "findelgasse",
       "lat": 49.4519222,
       "lng": 11.0785515,
       "name": "Tiefgarage Findelgasse",
@@ -177,6 +184,7 @@
       ]
     },
     {
+      "id": "hans-sachs-platz",
       "lat": 49.4535483,
       "lng": 11.0800427,
       "name": "Tiefgarage Hans-Sachs-Platz",
@@ -204,6 +212,7 @@
       ]
     },
     {
+      "id": "hauptmarkt",
       "lat": 49.4544931,
       "lng": 11.0754788,
       "name": "Parkhaus Hauptmarkt",
@@ -231,6 +240,7 @@
       ]
     },
     {
+      "id": "sebalder-hoefe",
       "lat": 49.456727,
       "lng": 11.088309,
       "name": "Parkhaus Sebalder-Höfe",
@@ -256,6 +266,7 @@
       ]
     },
     {
+      "id": "maxtorhof",
       "lat": 49.4599136,
       "lng": 11.0824978,
       "name": "Tiefgarage Maxtorhof",
@@ -284,6 +295,7 @@
       ]
     },
     {
+      "id": "parcside",
       "lat": 49.461866,
       "lng": 11.092324,
       "name": "Tiefgarage ParcSide",
@@ -302,6 +314,7 @@
       ]
     },
     {
+      "id": "tempohaus",
       "lat": 49.466201,
       "lng": 11.098001,
       "name": "Parkplatz am Tempohaus",
@@ -319,6 +332,7 @@
       ]
     },
     {
+      "id": "franken-campus",
       "lat": 49.4289571,
       "lng": 11.0887369,
       "name": "Parkhaus Franken Campus",

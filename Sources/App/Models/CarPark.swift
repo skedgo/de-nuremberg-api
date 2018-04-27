@@ -8,6 +8,7 @@
 import Foundation
 
 struct CarPark: Codable {
+  let id: String
   let lat: CLLocationDegrees
   let lng: CLLocationDegrees
   let name: String

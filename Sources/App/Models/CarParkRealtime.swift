@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CarParkRealtime {
+struct CarParkRealtime: Codable {
   let realTimeName: String
   
   let isOpen: Bool
@@ -16,4 +16,6 @@ struct CarParkRealtime {
   
   let opens: String
   let closes: String
+  
+  var lastUpdated = Date()
 }
