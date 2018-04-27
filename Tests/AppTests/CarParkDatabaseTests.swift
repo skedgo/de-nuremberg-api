@@ -30,9 +30,9 @@ class CarParkDatabaseTests: TestCase {
     let database = try loadDatabase()
     let realtimes = try loadRealtime()
     
-    for carPark in database.carParks.values where carPark.realTimeName != nil {
+    for carPark in database.carParks.values where carPark.realTimeId != nil {
       let match = realtimes.find(carPark)
-      XCTAssertNotNil(match, "No match for \(carPark.realTimeName!)")
+      XCTAssertNotNil(match, "No match for \(carPark.realTimeId!)")
     }
   }
   

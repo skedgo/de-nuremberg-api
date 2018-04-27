@@ -8,7 +8,7 @@
 import Foundation
 
 struct CarParkRealtime: Codable {
-  let realTimeName: String
+  let realTimeId: String
   
   let isOpen: Bool
   let totalSpaces: Int

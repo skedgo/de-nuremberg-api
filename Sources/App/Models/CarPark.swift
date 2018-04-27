@@ -13,7 +13,7 @@ struct CarPark: Codable {
   let lng: CLLocationDegrees
   let name: String
   let link: String
-  let realTimeName: String?
+  let realTimeId: String?
   
   let totalSpaces: Int
   let open: String

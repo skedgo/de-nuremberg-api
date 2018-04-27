@@ -42,12 +42,6 @@ class PLCRealtimeFetcher {
   
 }
 
-extension Array where Element == CarParkRealtime {
-  func find(_ carPark: CarPark) -> Element? {
-    return first { $0.realTimeName.trim() == carPark.realTimeName?.trim() }
-  }
-}
-
 fileprivate extension CarParkRealtime {
   init?(line: String) {
     let parts = line.split(separator: ",").map { String($0).trim() }
@@ -55,7 +49,7 @@ fileprivate extension CarParkRealtime {
       return nil
     }
     
-    realTimeName = parts[0]
+    realTimeId = parts[0]
     isOpen = parts[1] == "1"
     totalSpaces = total
     availableSpaces = available
