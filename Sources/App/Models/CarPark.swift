@@ -21,6 +21,8 @@ struct CarPark: Codable {
   
   let fares: [FareTable]
   
+  var source: DataSource?
+  
   struct FareTable: Codable {
     let title: String?
     let times: String
@@ -31,5 +33,11 @@ struct CarPark: Codable {
     let type: String?
     let maxDurationInMinutes: Int
     let value: Double
+  }
+  
+  struct DataSource: Codable {
+    let name: String
+    let website: String?
+    let disclaimer: String?
   }
 }

@@ -55,5 +55,7 @@ fileprivate extension CarParkRealtime {
     availableSpaces = available
     opens = parts[4]
     closes = parts[5] == "00:00" ? "24:00" : parts[5]
+    
+    source = CarPark.DataSource(name: "Stadt Nürnberg", website: "http://www.tiefbauamt.nuernberg.de/site/parken/parkhausbelegung/parkhaus_belegung.html", disclaimer: nil)
   }
 }

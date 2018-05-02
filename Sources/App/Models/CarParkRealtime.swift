@@ -17,5 +17,7 @@ struct CarParkRealtime: Codable {
   let opens: String
   let closes: String
   
+  var source: CarPark.DataSource?
+  
   var lastUpdated = Date()
 }

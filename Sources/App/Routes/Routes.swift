@@ -43,7 +43,6 @@ extension Droplet {
         return Response(status: .notFound, body: "Real-time data currently not available for car park with id \(id)")
       }
 
-      // TODO: Use a dedicated model for this with nicer output?
       return try match.makeResponse(using: encoder)
     }
 

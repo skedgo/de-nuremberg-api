@@ -20,7 +20,7 @@ class CarParkDatabase {
     self.sources = sources
     
     self.carParks = sources
-      .flatMap { $0.list }
+      .flatMap { $0.flattened() }
       .reduce(into: [:]) { (acc: inout [String: CarPark], carPark: CarPark) in
         acc[carPark.id] = carPark
       }
@@ -33,11 +33,23 @@ class CarParkDatabase {
 }
 
 fileprivate struct CarParkSource: Codable {
-  let source: String
+  let source: CarPark.DataSource
   let list: [CarPark]
 
   static func load(contentsOf path: URL) throws -> CarParkSource {
     let data = try Data(contentsOf: path)
     return try! JSONDecoder().decode(CarParkSource.self, from: data)
+  }
+  
+  func flattened() -> [CarPark] {
+    return list.map { $0.attributing(source) }
+  }
+}
+
+extension CarPark {
+  fileprivate func attributing(_ source: CarPark.DataSource) -> CarPark {
+    var updated = self
+    updated.source = source
+    return updated
   }
 }

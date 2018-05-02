@@ -1,5 +1,8 @@
 {
-  "source": "https://www.parkopedia.de/",
+  "source": {
+    "name": "Parkopedia",
+    "website": "https://www.parkopedia.de/"
+  },
   "list": [
     {
       "id": "galeria-kaufhof",

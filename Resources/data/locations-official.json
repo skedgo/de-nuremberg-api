@@ -1,5 +1,8 @@
 {
-  "source": "http://www.parkhaus-nuernberg.de/parkhaeuser/kartenansicht.html",
+  "source": {
+    "name": "Parkaus Service Nürnberg GmbH",
+    "website": "http://www.parkhaus-nuernberg.de/parkhaeuser/kartenansicht.html"
+  },
   "list": [
     {
       "id": "roederstrasse",
