@@ -20,9 +20,9 @@ class PLCRealtimeFetcher {
   
   private static let endpoint = "http://tiefbauamt.nuernberg.de/site/parken/parkhausbelegung/plc_info.htm"
   
-  static func fetch(for droplet: Droplet) throws -> [CarParkRealtime] {
+  static func fetch(using client: ClientFactoryProtocol) throws -> [CarParkRealtime] {
     
-    let response = try droplet.client.get(endpoint)
+    let response = try client.get(endpoint)
     guard case .data(let bytes) = response.body else {
       throw PLCRealtimeParserError.unexpectedResponse
     }

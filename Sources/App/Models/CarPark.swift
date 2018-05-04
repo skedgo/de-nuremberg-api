@@ -22,6 +22,7 @@ struct CarPark: Codable {
   let fares: [FareTable]
   
   var source: DataSource?
+  var availability: CarParkRealtime?
   
   struct FareTable: Codable {
     /// A human-friendly description of this fare table

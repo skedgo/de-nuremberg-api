@@ -16,7 +16,9 @@ extension Droplet {
       guard let carparks = CarParkDatabase.shared?.carParks.values else {
         return Response(status: .notFound)
       }
-      let sorted = Array(carparks).sorted(by: { $0.id < $1.id })
+      let sorted = Array(carparks)
+        .sorted(by: { $0.id < $1.id })
+        .map { CarParkRealtimeCache.shared.addingRealTime(to: $0, using: self.client) }
       return try sorted.makeResponse(using: encoder)
     }
     
@@ -25,7 +27,8 @@ extension Droplet {
       guard let carPark = CarParkDatabase.shared?.carParks[id] else {
         return Response(status: .notFound)
       }
-      return try carPark.makeResponse(using: encoder)
+      let carParkWithAvailability = CarParkRealtimeCache.shared.addingRealTime(to: carPark, using: self.client)
+      return try carParkWithAvailability.makeResponse(using: encoder)
     }
 
     get("carparks", String.parameter, "availability") { req in
@@ -36,10 +39,7 @@ extension Droplet {
       guard let _ = CarParkDatabase.shared?.carParks[id]?.realTimeId else {
         return Response(status: .notFound, body: "No real-time data available for car park with id \(id)")
       }
-      
-      let realtimes = try CarParkRealtimeCache.shared.fetchAndUpdate(for: self)
-
-      guard let match = realtimes.find(carPark) else {
+      guard let match = try CarParkRealtimeCache.shared.realTime(for: carPark, using: self.client) else {
         return Response(status: .notFound, body: "Real-time data currently not available for car park with id \(id)")
       }
 
