@@ -57,7 +57,7 @@
           ]
         },
         {
-          "title": "Patients",
+          "category": "Patients",
           "times": "24/7",
           "prices": [
             { "type": "daytime", "maxDurationInMinutes": 1440, "value": 5 }
@@ -187,7 +187,7 @@
           ]
         },
         {
-          "title": "Customers",
+          "category": "Customers",
           "times": "Mon-Sat",
           "prices": [
             { "maxDurationInMinutes": 60,  "value": 0 },

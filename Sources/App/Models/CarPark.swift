@@ -24,7 +24,16 @@ struct CarPark: Codable {
   var source: DataSource?
   
   struct FareTable: Codable {
+    /// A human-friendly description of this fare table
     let title: String?
+    
+    /// Used when these fares only apply under certain conditions,
+    /// e.g., only for customers, or only for motorcycles, or only
+    /// during events.
+    let category: String?
+    
+    /// Machine-friendly string when these fares apply, e.g., '24/7'
+    /// 'Mo-Fr 06:00-23:00' or '06:00-23:00'
     let times: String
     let prices: [Fare]
   }
