@@ -11,7 +11,10 @@
     	<img src="https://travis-ci.org/skedgo/de-nuremberg-api.svg?branch=master" alt="Build Status">
     </a>
     <a href="https://swift.org">
-        <img src="http://img.shields.io/badge/swift-4.0-brightgreen.svg" alt="Swift 4.0">
+        <img src="http://img.shields.io/badge/swift-4.1-brightgreen.svg" alt="Swift 4.1">
+    </a>
+    <a href="https://vapor.codes">
+        <img src="http://img.shields.io/badge/vapor-3.0-brightgreen.svg" alt="Vapor 3.0">
     </a>
 </center>
 
