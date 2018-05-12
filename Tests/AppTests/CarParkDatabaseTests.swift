@@ -7,15 +7,15 @@
 
 import Foundation
 
+import Vapor
 import XCTest
-import Testing
-import HTTP
-import Sockets
-@testable import Vapor
+
 @testable import App
 
-class CarParkDatabaseTests: TestCase {
+class CarParkDatabaseTests: XCTestCase {
 
+  let app = try! Application.testable()
+  
   func testLoadingCarParks() throws {
     let database = try loadDatabase()
     XCTAssertEqual(24, database.carParks.count)
@@ -39,14 +39,14 @@ class CarParkDatabaseTests: TestCase {
 }
 
 extension CarParkDatabaseTests {
+  
   private func loadDatabase() throws -> CarParkDatabase {
-    return try CarParkDatabase(directory: workingDirectory() + "Resources/data/")
+    let path = try app.make(DirectoryConfig.self).workDir + "Resources/data/"
+    return try CarParkDatabase(directory: path)
   }
 
   private func loadRealtime() throws -> [CarParkRealtime] {
-    let path = URL(fileURLWithPath: workingDirectory() + "Tests/AppTests/Data/plc_info.htm")
-    let content = try String(contentsOf: path, encoding: .ascii)
-    return PLCRealtimeFetcher.parse(content)
+    return try PLCRealtimeFetcher.loadTestData(for: app)
   }
 }
 

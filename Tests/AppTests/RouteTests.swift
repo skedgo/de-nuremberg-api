@@ -1,36 +1,25 @@
+import Vapor
 import XCTest
-import Foundation
-import Testing
-import HTTP
-@testable import Vapor
+
 @testable import App
 
 /// This file shows an example of testing 
 /// routes through the Droplet.
 
-class RouteTests: TestCase {
-    let drop = try! Droplet.testable()
-    
-    func testCarParks() throws {
-        try drop
-            .testResponse(to: .get, at: "carparks")
-            .assertStatus(is: .ok)
-            .assertBody(contains: "totalSpaces")
-    }
+class RouteTests: XCTestCase {
 
-  func testIndividualCarPark() throws {
-    try drop
-      .testResponse(to: .get, at: "carparks/karstadt")
-      .assertStatus(is: .ok)
-      .assertBody(contains: "totalSpaces")
+  let app = try! Application.testable()
+
+  func testCarParks() throws {
+    let response = try app.getResponse(to: "carparks", decodeTo: [CarPark].self)
+    XCTAssertEqual(24, response.count)
   }
 
-    func testInfo() throws {
-        try drop
-            .testResponse(to: .get, at: "info")
-            .assertStatus(is: .ok)
-            .assertBody(contains: "0.0.0.0")
-    }
+  func testIndividualCarPark() throws {
+    let response = try app.getResponse(to: "carparks/karstadt", decodeTo: CarPark.self)
+    XCTAssertEqual(376, response.totalSpaces)
+    XCTAssertEqual(217, response.availability?.availableSpaces)
+  }
 }
 
 // MARK: Manifest
@@ -42,6 +31,5 @@ extension RouteTests {
     static let allTests = [
         ("testCarParks", testCarParks),
         ("testIndividualCarPark", testIndividualCarPark),
-        ("testInfo", testInfo),
     ]
 }

@@ -9,7 +9,7 @@ import Foundation
 
 extension Array where Element == CarParkRealtime {
   func find(_ carPark: CarPark) -> Element? {
-    return first { $0.realTimeId.trim() == carPark.realTimeId?.trim() }
+    return first { $0.realTimeId.trimmingCharacters(in: .whitespaces) == carPark.realTimeId?.trimmingCharacters(in: .whitespaces) }
   }
   
   var oldestUpdate: Date? {
