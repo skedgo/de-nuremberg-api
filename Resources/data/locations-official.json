@@ -6,374 +6,402 @@
   "list": [
     {
       "id": "roederstrasse",
-      "lat": 49.3866600,
-      "lng": 11.3532600,
+      "coordinates": {
+        "latitude": 49.3866600,
+        "longitude": 11.3532600
+      },
       "name": "Parkplatz / Tiefgarage Röderstraße",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/altdorf/roederstrasse.html",
-      "totalSpaces": 86,
-      "open": "24/7",
+      "totalSpotNumber": 86,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
           "title": "TAGES- UND NACHT-TARIF",
-          "times": "00:00 – 24:00",
+          "times": "Mo-Su",
           "prices": [
-            { "maxDurationInMinutes": 30,  "value": 0.5 },
-            { "maxDurationInMinutes": 60,  "value": 1.0 },
-            { "maxDurationInMinutes": 90,  "value": 1.5 },
-            { "maxDurationInMinutes": 120, "value": 2.0 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 15 }
+            { "maxDurationInMinutes": 30,  "amount": 0.5 },
+            { "maxDurationInMinutes": 60,  "amount": 1.0 },
+            { "maxDurationInMinutes": 90,  "amount": 1.5 },
+            { "maxDurationInMinutes": 120, "amount": 2.0 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 15 }
           ]
         }
       ]
     },
     {
       "id": "theater",
-      "lat": 49.445170,
-      "lng": 11.076055,
+      "coordinates": {
+        "latitude": 49.445170,
+        "longitude": 11.076055
+      },
       "name": "Parkhaus Theater",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/innenstadt/theater.html",
       "realTimeId": "Parkhaus Theater",
-      "totalSpaces": 180,
-      "open": "24/7",
+      "totalSpotNumber": 180,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 1.90,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "06:00 – 19:00",
+          "times": "Mo-Su 06:00–19:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.5 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 15 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.5 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 15 }
           ]
         },
         {
           "title": "NACHT-TARIF",
-          "times": "19:00 – 06:00",
+          "times": "Mo-Su 19:00–06:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1 }
           ]
         }
       ]
     },
     {
       "id": "sterntor",
-      "lat": 49.4478768,
-      "lng": 11.0774303,
+      "coordinates": {
+        "latitude": 49.4478768,
+        "longitude": 11.0774303
+      },
       "name": "Parkhaus Sterntor",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/innenstadt/sterntor.html",
       "realTimeId": "Parkhaus Sterntor",
-      "totalSpaces": 476,
-      "open": "24/7",
+      "totalSpotNumber": 476,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "06:00 – 20:00",
+          "times": "Mo-Su 06:00–20:00",
           "prices": [
-            { "maxDurationInMinutes": 30,  "value": 1.0 },
-            { "maxDurationInMinutes": 60,  "value": 1.8 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.8 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 16 }
+            { "maxDurationInMinutes": 30,  "amount": 1.0 },
+            { "maxDurationInMinutes": 60,  "amount": 1.8 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.8 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 16 }
           ]
         },
         {
           "title": "NACHT-TARIF",
-          "times": "20:00 – 06:00",
+          "times": "Mo-Su 20:00–06:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.2 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.2 }
           ]
         }
       ]    
     },
     {
       "id": "jakobsmarkt",
-      "lat": 49.4490226,
-      "lng": 11.0711328,
+      "coordinates": {
+        "latitude": 49.4490226,
+        "longitude": 11.0711328
+      },
       "name": "Parkhaus Jakobsmarkt",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/innenstadt/jakobsmarkt.html",
       "realTimeId": "Parkhaus Jakobsmarkt",
-      "totalSpaces": 456,
-      "open": "24/7",
+      "totalSpotNumber": 456,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.10,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "06:00 – 20:00",
+          "times": "Mo-Su 06:00–20:00",
           "prices": [
-            { "maxDurationInMinutes": 30,  "value": 1.0 },
-            { "maxDurationInMinutes": 60,  "value": 1.8 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.8 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 16 }
+            { "maxDurationInMinutes": 30,  "amount": 1.0 },
+            { "maxDurationInMinutes": 60,  "amount": 1.8 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.8 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 16 }
           ]
         },
         {
           "title": "NACHT-TARIF",
-          "times": "20:00 – 06:00",
+          "times": "Mo-Su 20:00–06:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.2 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.2 }
           ]
         }
       ]
     },
     {
       "id": "adcom-center",
-      "lat": 49.4478969,
-      "lng": 11.0866880,
+      "coordinates": {
+        "latitude": 49.4478969,
+        "longitude": 11.0866880
+      },
       "name": "Tiefgarage ADCOM-Center",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/stadtgebiet/adcom-center.html",
       "realTimeId": "Parkhaus ADCOM-Cente",
-      "totalSpaces": 92,
-      "open": "24/7",
+      "totalSpotNumber": 92,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
           "title": "TAGES- UND NACHT-TARIF",
-          "times": "00:00 – 24:00",
+          "times": "Mo-Su",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.4 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 13 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.4 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 13 }
           ]
         }
       ]
     },
     {
       "id": "katharinenhof",
-      "lat": 49.4512086,
-      "lng": 11.0819868,
+      "coordinates": {
+        "latitude": 49.4512086,
+        "longitude": 11.0819868
+      },
       "name": "Parkhaus Katharinenhof",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/innenstadt/katharinenhof.html",
       "realTimeId": "Parkhaus Katharinenh",
-      "totalSpaces": 489,
-      "open": "24/7",
+      "totalSpotNumber": 489,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.10,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "06:00 – 20:00",
+          "times": "Mo-Su 06:00–20:00",
           "prices": [
-            { "maxDurationInMinutes": 30,  "value": 1.0 },
-            { "maxDurationInMinutes": 60,  "value": 1.8 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.8 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 16 }
+            { "maxDurationInMinutes": 30,  "amount": 1.0 },
+            { "maxDurationInMinutes": 60,  "amount": 1.8 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.8 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 16 }
           ]
         },
         {
           "title": "NACHT-TARIF",
-          "times": "20:00 – 06:00",
+          "times": "Mo-Su 20:00–06:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.2 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.2 }
           ]
         }
       ]
     },
     {
       "id": "findelgasse",
-      "lat": 49.4519222,
-      "lng": 11.0785515,
+      "coordinates": {
+        "latitude": 49.4519222,
+        "longitude": 11.0785515
+      },
       "name": "Tiefgarage Findelgasse",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/innenstadt/findelgasse.html",
       "realTimeId": "Parkhaus Findelgasse",
-      "totalSpaces": 149,
-      "open": "24/7",
+      "totalSpotNumber": 149,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "06:00 – 20:00",
+          "times": "Mo-Su 06:00–20:00",
           "prices": [
-            { "maxDurationInMinutes": 60,  "value": 2.0 },
-            { "maxDurationInMinutes": 120,  "value": 4.0 },
-            { "maxDurationInMinutes": 180,  "value": 6.0 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.8 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 16 }
+            { "maxDurationInMinutes": 60,  "amount": 2.0 },
+            { "maxDurationInMinutes": 120,  "amount": 4.0 },
+            { "maxDurationInMinutes": 180,  "amount": 6.0 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.8 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 16 }
           ]
         },
         {
           "title": "NACHT-TARIF",
-          "times": "20:00 – 06:00",
+          "times": "Mo-Su 20:00–06:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.3 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.3 }
           ]
         }
       ]
     },
     {
       "id": "hans-sachs-platz",
-      "lat": 49.4535483,
-      "lng": 11.0800427,
+      "coordinates": {
+        "latitude": 49.4535483,
+        "longitude": 11.0800427
+      },
       "name": "Tiefgarage Hans-Sachs-Platz",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/innenstadt/hans-sachs-platz.html",
       "realTimeId": "Parkhaus Hans-Sachs-",
-      "totalSpaces": 63,
-      "open": "24/7",
+      "totalSpotNumber": 63,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 1.90,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "06:00 – 20:00",
+          "times": "Mo-Su 06:00–20:00",
           "prices": [
-            { "maxDurationInMinutes": 30,  "value": 1.0 },
-            { "maxDurationInMinutes": 60,  "value": 2.0 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 2.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 16 }
+            { "maxDurationInMinutes": 30,  "amount": 1.0 },
+            { "maxDurationInMinutes": 60,  "amount": 2.0 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 2.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 16 }
           ]
         },
         {
           "title": "NACHT-TARIF",
-          "times": "20:00 – 06:00",
+          "times": "Mo-Su 20:00–06:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.2 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.2 }
           ]
         }
       ]
     },
     {
       "id": "hauptmarkt",
-      "lat": 49.4544931,
-      "lng": 11.0754788,
+      "coordinates": {
+        "latitude": 49.4544931,
+        "longitude": 11.0754788
+      },
       "name": "Parkhaus Hauptmarkt",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/innenstadt/hauptmarkt.html",
       "realTimeId": "Parkhaus Hauptmarkt ",
-      "totalSpaces": 525,
-      "open": "24/7",
+      "totalSpotNumber": 525,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.10,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "06:00 – 20:00",
+          "times": "Mo-Su 06:00–20:00",
           "prices": [
-            { "maxDurationInMinutes": 30,  "value": 1.0 },
-            { "maxDurationInMinutes": 60,  "value": 1.8 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.8 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 16 }
+            { "maxDurationInMinutes": 30,  "amount": 1.0 },
+            { "maxDurationInMinutes": 60,  "amount": 1.8 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.8 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 16 }
           ]
         },
         {
           "title": "NACHT-TARIF",
-          "times": "20:00 – 06:00",
+          "times": "Mo-Su 20:00–06:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.2 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.2 }
           ]
         }
       ]
     },
     {
       "id": "sebalder-hoefe",
-      "lat": 49.456727,
-      "lng": 11.088309,
+      "coordinates": {
+        "latitude": 49.456727,
+        "longitude": 11.088309
+      },
       "name": "Parkhaus Sebalder-Höfe",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/innenstadt/sebalder-hoefe.html",
       "realTimeId": "Parkhaus Sebalder-Hö",
-      "totalSpaces": 307,
-      "open": "24/7",
+      "totalSpotNumber": 307,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "06:00 – 20:00",
+          "times": "Mo-Su 06:00–20:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.5 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 6 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.5 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 6 }
           ]
         },
         {
           "title": "NACHT-TARIF",
-          "times": "20:00 – 06:00",
+          "times": "Mo-Su 20:00–06:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.0 }
           ]
         }
       ]
     },
     {
       "id": "maxtorhof",
-      "lat": 49.4599136,
-      "lng": 11.0824978,
+      "coordinates": {
+        "latitude": 49.4599136,
+        "longitude": 11.0824978
+      },
       "name": "Tiefgarage Maxtorhof",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/stadtgebiet/maxtorhof.html",
-      "totalSpaces": 313,
-      "open": "Mo-Su 06:00-23:00",
+      "totalSpotNumber": 313,
+      "openingHours": ["Mo-Su 06:00-23:00"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "06:00 – 20:00",
+          "times": "Mo-Su 06:00–20:00",
           "prices": [
-            { "maxDurationInMinutes": 25,  "value": 0.5 },
-            { "maxDurationInMinutes": 60,  "value": 1.1 },
-            { "maxDurationInMinutes": 120,  "value": 2.3 },
-            { "maxDurationInMinutes": 180,  "value": 3.4 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 6.5 }
+            { "maxDurationInMinutes": 25,  "amount": 0.5 },
+            { "maxDurationInMinutes": 60,  "amount": 1.1 },
+            { "maxDurationInMinutes": 120,  "amount": 2.3 },
+            { "maxDurationInMinutes": 180,  "amount": 3.4 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 6.5 }
           ]
         },
         {
           "title": "NACHT-TARIF",
-          "times": "20:00 – 06:00",
+          "times": "Mo-Su 20:00–06:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 0.5 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 0.5 }
           ]
         }
       ]
     },
     {
       "id": "parcside",
-      "lat": 49.461866,
-      "lng": 11.092324,
+      "coordinates": {
+        "latitude": 49.461866,
+        "longitude": 11.092324
+      },
       "name": "Tiefgarage ParcSide",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/stadtgebiet/parcside.html",
-      "totalSpaces": 140,
-      "open": "Mo-Fr 06:30-21:00; Sa 08:00-14:00",
+      "totalSpotNumber": 140,
+      "openingHours": ["Mo-Fr 06:30-21:00", "Sa 08:00-14:00"],
       "maxHeightInMetres": 1.80,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "06:00 – 20:00",
+          "times": "Mo-Su",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 10 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 10 }
           ]
         }
       ]
     },
     {
       "id": "tempohaus",
-      "lat": 49.466201,
-      "lng": 11.098001,
+      "coordinates": {
+        "latitude": 49.466201,
+        "longitude": 11.098001
+      },
       "name": "Parkplatz am Tempohaus",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/stadtgebiet/tempohaus.html",
-      "totalSpaces": 125,
-      "open": "24/7",
+      "totalSpotNumber": 125,
+      "openingHours": ["Mo-Su"],
       "fares": [
         {
           "title": "TAGES- UND NACHT-TARIF",
-          "times": "00:00 – 24:00",
+          "times": "Mo-Su",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 0.4 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 4 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 0.4 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 4 }
           ]
         }
       ]
     },
     {
       "id": "franken-campus",
-      "lat": 49.4289571,
-      "lng": 11.0887369,
+      "coordinates": {
+        "latitude": 49.4289571,
+        "longitude": 11.0887369
+      },
       "name": "Parkhaus Franken Campus",
       "link": "http://www.parkhaus-nuernberg.de/parkhaeuser/stadtgebiet/franken-campus.html",
-      "totalSpaces": 754,
-      "open": "Mo-Su 05:30-21:00",
+      "totalSpotNumber": 754,
+      "openingHours": ["Mo-Su 05:30-21:00"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
           "title": "TAGES-TARIF",
-          "times": "05:30 – 21:00",
+          "times": "Mo-Su",
           "prices": [
-            { "maxDurationInMinutes": 30,  "value": 0 },
-            { "maxDurationInMinutes": 90,  "value": 0.5 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 0.5 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 10 }
+            { "maxDurationInMinutes": 30,  "amount": 0 },
+            { "maxDurationInMinutes": 90,  "amount": 0.5 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 0.5 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 10 }
           ]
         }
       ]

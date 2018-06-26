@@ -6,291 +6,311 @@
   "list": [
     {
       "id": "galeria-kaufhof",
-      "lat": 49.449371,
-      "lng": 11.075835,
+      "coordinates": {
+        "latitude": 49.449371,
+        "longitude": 11.075835
+      },
       "name": "Parkhaus Galeria Kaufhof",
       "realTimeId": "Parkhaus Galeria Kau",
       "link": "https://www.parkopedia.de/parking/garage/galeria_kaufhof_königstraße/90402/nürnberg/",
-      "totalSpaces": 220,
-      "open": "Mo-Sa 07:00-00:00",
+      "totalSpotNumber": 220,
+      "openingHours": ["Mo-Sa 07:00-00:00"],
       "maxHeightInMetres": 1.9,
       "fares": [
         {
-          "times": "Mon-Sat 07:00 - 20:00",
+          "times": "Mo-Sa 07:00-20:00",
           "prices": [
-            { "maxDurationInMinutes": 60,  "value": 1.5 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 2.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 20 }
+            { "maxDurationInMinutes": 60,  "amount": 1.5 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 2.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 20 }
           ]
         },
         {
-          "times": "Mon-Sat 20:00 - 00:00",
+          "times": "Mo-Sa 20:00-00:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.0 }
           ]
         }
       ]
     },
     {
       "id": "erler-klinik",
-      "lat": 49.453079,
-      "lng": 11.068085,
+      "coordinates": {
+        "latitude": 49.453079,
+        "longitude": 11.068085
+      },
       "name": "Parkhaus Erler-Klinik",
       "realTimeId": "Parkhaus Erler-Klini",
       "link": "https://www.parkopedia.de/parking/garage/erler_klinik/90429/nürnberg/?arriving=201804271200&leaving=201804271400",
-      "totalSpaces": 155,
-      "open": "24/7",
+      "totalSpotNumber": 155,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
-          "times": "Mon-Sun 06:00 - 21:00",
+          "times": "Mo-Su 06:00-21:00",
           "prices": [
-            { "maxDurationInMinutes": 60,  "value": 1.8 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 2.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 25 }
+            { "maxDurationInMinutes": 60,  "amount": 1.8 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 2.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 25 }
           ]
         },
         {
-          "times": "Mon-Sun 21:00 - 06:00",
+          "times": "Mo-Su 21:00-06:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.0 }
           ]
         },
         {
           "category": "Patients",
-          "times": "24/7",
+          "times": "Mo-Su",
           "prices": [
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 5 }
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 5 }
           ]
         }
       ]
     },
     {
       "id": "adlerstrasse",
-      "lat": 49.45185,
-      "lng": 11.077162,
+      "coordinates": {
+        "latitude": 49.45185,
+        "longitude": 11.077162
+      },
       "name": "Parkhaus Adlerstraße",
       "realTimeId": "Parkhaus Adlerstraße",
       "link": "https://www.parkopedia.de/parking/garage/adlerstraße_4_8/90403/nürnberg/",
-      "totalSpaces": 260,
-      "open": "24/7",
+      "totalSpotNumber": 260,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.05,
       "fares": [
         {
-          "times": "Mon-Sat 08:30 - 20:30",
+          "times": "Mo-Sa 08:30-20:30",
           "prices": [
-            { "maxDurationInMinutes": 30,  "value": 1.0 },
-            { "maxDurationInMinutes": 60,  "value": 2.0 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
-            { "type": "half day", "maxDurationInMinutes": 720, "value": 15 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 20 }
+            { "maxDurationInMinutes": 30,  "amount": 1.0 },
+            { "maxDurationInMinutes": 60,  "amount": 2.0 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.0 },
+            { "type": "half day", "maxDurationInMinutes": 720, "amount": 15 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 20 }
           ]
         },
         {
-          "times": "Mon-Sat 20:30 - 08:30",
+          "times": "Mo-Sa 20:30-08:30",
           "prices": [
-            { "maxDurationInMinutes": 30,  "value": 1.0 },
-            { "type": "half day", "maxDurationInMinutes": 720, "value": 10 }
+            { "maxDurationInMinutes": 30,  "amount": 1.0 },
+            { "type": "half day", "maxDurationInMinutes": 720, "amount": 10 }
           ]
         },
         {
-          "times": "Sun",
+          "times": "Su",
           "prices": [
-            { "maxDurationInMinutes": 60,  "value": 1.0 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 10 }
+            { "maxDurationInMinutes": 60,  "amount": 1.0 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 10 }
           ]
         }
       ]
     },
     {
       "id": "woehrl",
-      "lat": 49.451977,
-      "lng": 11.070484,
+      "coordinates": {
+        "latitude": 49.451977,
+        "longitude": 11.070484
+      },
       "name": "Parkhaus Wöhrl",
       "realTimeId": "Parkhaus Wöhrl",
       "link": "https://www.parkopedia.de/parking/underground/wöhrl/90402/nürnberg/",
-      "totalSpaces": 441,
-      "open": "24/7",
+      "totalSpotNumber": 441,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.1,
       "fares": [
         {
-          "times": "08:00 - 21:00",
+          "times": "Mo-Su 08:00-21:00",
           "prices": [
-            { "maxDurationInMinutes": 60,  "value": 2.0 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.5 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 20 }
+            { "maxDurationInMinutes": 60,  "amount": 2.0 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.5 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 20 }
           ]
         },
         {
-          "times": "21:00-08:00",
+          "times": "Mo-Su 21:00-08:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1 }
           ]
         }
       ]
     },
     {
       "id": "akademie",
-      "lat": 49.451115,
-      "lng": 11.084146,
+      "coordinates": {
+        "latitude": 49.451115,
+        "longitude": 11.084146
+      },
       "name": "Parkhaus Nürnberger Akademie",
       "realTimeId": "Parkhaus Nürnberger ",
       "link": "https://www.parkopedia.de/parking/underground/nürnberger_akademie/90403/nürnberg/",
-      "totalSpaces": 300,
-      "open": "24/7",
+      "totalSpotNumber": 300,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
-          "times": "08:00-21:00",
+          "times": "Mo-Su 08:00-21:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 15 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 15 }
           ]
         },
         {
-          "times": "21:00-08:00",
+          "times": "Mo-Su 21:00-08:00",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 0.5 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 3 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 0.5 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 3 }
           ]
         }
       ]
     },
     {
       "id": "city-park-center",
-      "lat": 49.445408,
-      "lng": 11.071309,
+      "coordinates": {
+        "latitude": 49.445408,
+        "longitude": 11.071309
+      },
       "name": "Parkhaus City-Park-Center",
       "realTimeId": "Parkhaus City-Park-C",
       "link": "https://www.parkopedia.de/parking/locations/parkhaus_city-_park-_center_sandstraße_nuremberg_germany_u0zc7cnrkxq/",
-      "totalSpaces": 515,
-      "open": "24/7",
+      "totalSpotNumber": 515,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.0,
       "fares": [
         {
-          "times": "Mon-Fri",
+          "times": "Mo-Fr",
           "prices": [
-            { "maxDurationInMinutes": 60,  "value": 0.5 },
-            { "maxDurationInMinutes": 120, "value": 2.0 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.5 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 18 }
+            { "maxDurationInMinutes": 60,  "amount": 0.5 },
+            { "maxDurationInMinutes": 120, "amount": 2.0 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.5 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 18 }
           ]
         },
         {
-          "times": "Sat-Sun",
+          "times": "Sa-Su",
           "prices": [
-            { "maxDurationInMinutes": 60,  "value": 0.5 },
-            { "maxDurationInMinutes": 120, "value": 2.0 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.5 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 6 }
+            { "maxDurationInMinutes": 60,  "amount": 0.5 },
+            { "maxDurationInMinutes": 120, "amount": 2.0 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.5 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 6 }
           ]
         },
         {
           "category": "Customers",
-          "times": "Mon-Sat",
+          "times": "Mo-Sa",
           "prices": [
-            { "maxDurationInMinutes": 60,  "value": 0 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.5 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 18 }
+            { "maxDurationInMinutes": 60,  "amount": 0 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.5 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 18 }
           ]
         }
       ]
     },
     {
       "id": "maximum",
-      "lat": 49.449539,
-      "lng": 11.074343,
+      "coordinates": {
+        "latitude": 49.449539,
+        "longitude": 11.074343
+      },
       "name": "Parkhaus Maximum",
       "realTimeId": "Parkhaus Maximum",
       "link": "https://www.parkopedia.de/parking/underground/maximum/90402/nürnberg/",
-      "totalSpaces": 130,
-      "open": "Mo-Su 06:00-00:00",
+      "totalSpotNumber": 130,
+      "openingHours": ["Mo-Su 06:00-00:00"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
-          "times": "Mon-Sun",
+          "times": "Mo-Su",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 2.0 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 2.0 }
           ]
         }
       ]
     },
     {
       "id": "city-point",
-      "lat": 49.449347,
-      "lng": 11.07672,
+      "coordinates": {
+        "latitude": 49.449347,
+        "longitude": 11.07672
+      },
       "name": "Parkhaus City-Point",
       "realTimeId": "Parkhaus City-Point",
       "link": "https://www.parkopedia.de/parking/underground/city_point/90402/nürnberg/",
-      "totalSpaces": 200,
-      "open": "Mo-Sa 08:00-20:30",
+      "totalSpotNumber": 200,
+      "openingHours": ["Mo-Sa 08:00-20:30"],
       "maxHeightInMetres": 2.1,
       "fares": [
         {
-          "times": "Mon-Sat 08:00 - 20:30",
+          "times": "Mo-Sa",
           "prices": [
-            { "maxDurationInMinutes": 60,  "value": 1.5 },
-            { "maxDurationInMinutes": 120, "value": 3.5 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 2.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 20 }
+            { "maxDurationInMinutes": 60,  "amount": 1.5 },
+            { "maxDurationInMinutes": 120, "amount": 3.5 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 2.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 20 }
           ]
         }
       ]
     },
     {
       "id": "hauptbahnhof",
-      "lat": 49.446821,
-      "lng": 11.082929,
+      "coordinates": {
+        "latitude": 49.446821,
+        "longitude": 11.082929
+      },
       "name": "Parkhaus Hauptbahnhof",
       "realTimeId": "Parkhaus Hauptbahnho",
       "link": "https://www.parkopedia.de/parking/garage/am_hauptbahnhof/90443/nürnberg/",
-      "totalSpaces": 486,
-      "open": "24/7",
+      "totalSpotNumber": 486,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.00,
       "fares": [
         {
-          "times": "Mon-Sat",
+          "times": "Mo-Sa",
           "prices": [
-            { "maxDurationInMinutes": 15,  "value": 0.5 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 20 }
+            { "maxDurationInMinutes": 15,  "amount": 0.5 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 20 }
           ]
         },
         {
-          "times": "Sun",
+          "times": "Su",
           "prices": [
-            { "maxDurationInMinutes": 15,  "value": 0.5 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 1.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 8 }
+            { "maxDurationInMinutes": 15,  "amount": 0.5 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 1.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 8 }
           ]
         }        
       ]
     },
     {
       "id": "karstadt",
-      "lat": 49.452913,
-      "lng": 11.081308,
+      "coordinates": {
+        "latitude": 49.452913,
+        "longitude": 11.081308
+      },
       "name": "Parkhaus Karstadt",
       "realTimeId": "Parkhaus Karstadt",
       "link": "https://www.parkopedia.de/parking/underground/karstadt_an_der_lorenzkirche/90403/nürnberg/",
-      "totalSpaces": 376,
-      "open": "24/7",
+      "totalSpotNumber": 376,
+      "openingHours": ["Mo-Su"],
       "maxHeightInMetres": 2.1,
       "fares": [
         {
-          "times": "24/7",
+          "times": "Mo-Su",
           "prices": [
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 2.0 },
-            { "type": "daytime", "maxDurationInMinutes": 1440, "value": 18 }
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 2.0 },
+            { "type": "daytime", "maxDurationInMinutes": 1440, "amount": 18 }
           ]
         },
         {
           "title": "Kino-Tarif",
-          "times": "19:00-06:00",
+          "times": "Mo-Su 19:00-06:00",
           "prices": [
-            { "maxDurationInMinutes": 360,  "value": 3 },
-            { "type": "additional", "maxDurationInMinutes": 60, "value": 0.5 }
+            { "maxDurationInMinutes": 360,  "amount": 3 },
+            { "type": "additional", "maxDurationInMinutes": 60, "amount": 0.5 }
           ]
         }        
       ]

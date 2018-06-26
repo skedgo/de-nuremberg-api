@@ -33,7 +33,7 @@ class CarParkDatabase {
 }
 
 fileprivate struct CarParkSource: Codable {
-  let source: CarPark.DataSource
+  let source: CarPark.CompanyInfo
   let list: [CarPark]
 
   static func load(contentsOf path: URL) throws -> CarParkSource {
@@ -47,9 +47,9 @@ fileprivate struct CarParkSource: Codable {
 }
 
 extension CarPark {
-  fileprivate func attributing(_ source: CarPark.DataSource) -> CarPark {
+  fileprivate func attributing(_ source: CompanyInfo) -> CarPark {
     var updated = self
-    updated.source = source
+    updated.source = DataSource(provider: source, disclaimer: nil)
     return updated
   }
 }

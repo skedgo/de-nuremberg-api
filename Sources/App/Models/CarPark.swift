@@ -7,22 +7,30 @@
 
 import Foundation
 
+/// Same schema as https://github.com/skedgo/TSP-APIs => car-park.swagger.yaml
 struct CarPark: Codable {
   let id: String
-  let lat: CLLocationDegrees
-  let lng: CLLocationDegrees
   let name: String
+  let coordinates: GeoCoordinates
   let link: String
-  let realTimeId: String?
   
-  let totalSpaces: Int
-  let open: String
+  let totalSpotNumber: Int
   let maxHeightInMetres: Double?
   
+  let openingHours: [String]
   let fares: [FareTable]
   
   var source: DataSource?
+
+  let realTimeId: String?
   var availability: CarParkRealtime?
+
+  
+  struct GeoCoordinates: Codable {
+    let latitude: CLLocationDegrees
+    let longitude: CLLocationDegrees
+    let address: String?
+  }
   
   struct FareTable: Codable {
     /// A human-friendly description of this fare table
@@ -42,12 +50,16 @@ struct CarPark: Codable {
   struct Fare: Codable {
     let type: String?
     let maxDurationInMinutes: Int
-    let value: Double
+    let amount: Double
   }
   
   struct DataSource: Codable {
+    let provider: CompanyInfo
+    let disclaimer: String?
+  }
+  
+  struct CompanyInfo: Codable {
     let name: String
     let website: String?
-    let disclaimer: String?
   }
 }

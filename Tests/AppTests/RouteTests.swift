@@ -17,7 +17,8 @@ class RouteTests: XCTestCase {
 
   func testIndividualCarPark() throws {
     let response = try app.getResponse(to: "carparks/karstadt", decodeTo: CarPark.self)
-    XCTAssertEqual(376, response.totalSpaces)
+    XCTAssertEqual(376, response.totalSpotNumber)
+    XCTAssertEqual(217, response.availableSpotNumber)
     XCTAssertEqual(217, response.availability?.availableSpaces)
   }
 }
